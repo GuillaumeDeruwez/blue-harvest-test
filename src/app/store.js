@@ -1,10 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import testReducer from '../features/test/testSlice';
+import pollReducer from '../features/poll/pollSlice';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
-    test: testReducer,
+    poll: pollReducer,
   },
 });
