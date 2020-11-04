@@ -1,39 +1,81 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.App-Header{
+  height: 12vh;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 2px black solid;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.App-Header-Content{
+  font-weight: bold;
+  font-size: xx-large;
+  padding-bottom: 2vh;
+  padding-left: 1.5vw;
 }
+
+.section{
+  flex: 1;
+  display: flex;
+}
+
+.col1{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  border-right: black 2px solid;
+}
+
+.col2{
+  flex: 1;
+  background-color: brown;
+}
+
+.col3{
+  flex: 1;
+  background-color: cornflowerblue;
+}
+
+/* first column */
+
+.bottom-col1{
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bottom-col1 > p {
+  margin-bottom: 1em;
+}
+
+.padded-input{
+  margin: 2vh 0 3vh 0;
+}
+
+[type=text], [type=text] + button, .bottom-col1 > button{
+    padding: 0.2em;
+    margin: 0.5em 0.2em;
+    -moz-box-sizing: content-box; 
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 3vh;
+}
+
+[type=text] {
+  width: 80%;
+}
+
+[type=text] + button{
+  width: 10%;
+}
+
+.bottom-col1 > button{
+  width: 20%
+}
+

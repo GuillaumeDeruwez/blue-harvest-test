@@ -6,14 +6,24 @@ import { PollChart } from './features/poll/pollChart'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <PollCreation />
-        <PollVoting />
-        <div style={{ width: 200, height: 200 }}>
-          <PollChart />
-        </div>
+    <div className="App" >
+
+      <header className="App-Header">
+        <p className="App-Header-Content" >Sir Vote-a-lot</p>
       </header>
+
+      <section className="section">
+          <div className="col1">
+            <PollCreation/>
+          </div>
+          <div className="col2">
+            <PollVoting />
+          </div>
+          <div className="col3">
+            <PollChart />
+          </div>
+      </section>
+
     </div>
   );
 }

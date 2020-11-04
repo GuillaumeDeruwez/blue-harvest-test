@@ -27,23 +27,30 @@ export function PollCreation() {
     }
 
     const renderPollAnswer = poll.answers.map(answer => (
-        <React.Fragment key={answer.id}>
+        <div key={answer.id}>
             <input type="text" value={answer.answer} maxLength="80" onChange={onValueChanged} id={answer.id} />
             <button onClick={() => onRemoveQuestionClicked(answer.id)} disabled={poll.answers.length < 3 ? true : false}>X</button>
-            <br />
-        </React.Fragment>
+        </div>
     ))
 
     return (
-        <div>
-            <input type="text" maxLength="80" placeholder="name your poll" value={poll.pollName} onChange={onNameChanged} />
-            <br />
+        <>
+            <div className="padded-input">
+                <input type="text" maxLength="80" placeholder="name your poll" value={poll.pollName} onChange={onNameChanged} />
+            </div>
+
+
+
             {renderPollAnswer}
             <AddAnswerForm />
-            <div>
-                {poll.answers.length}/10 possible answers
+
+
+            <section className="bottom-col1">
+        
+                <p>{poll.answers.length}/10 possible answers</p>
                 <button onClick={onResetClicked}>Reset</button>
-            </div>
-        </div>
+
+            </section>
+        </>
     )
 }

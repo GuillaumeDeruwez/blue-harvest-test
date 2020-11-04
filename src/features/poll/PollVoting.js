@@ -25,9 +25,8 @@ export function PollVoting() {
     ))
 
     return (
-        <div>
-            {poll.pollName}
-            <br />
+        <div className="container">
+            <span className="Poll-Title">{poll.pollName}</span>
             <form onSubmit={onFormSubmit}>
                 {renderPollOptions}
                 <button type="submit">Vote</button>
