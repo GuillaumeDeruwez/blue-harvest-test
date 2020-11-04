@@ -13,15 +13,15 @@ function App() {
       </header>
 
       <section className="section">
-          <div className="col1">
+          <div className="col">
             <PollCreation/>
           </div>
-          <div className="col2">
+          <div className="col">
             <PollVoting />
           </div>
-          <div className="col3">
+          {/* <div className="col3">
             <PollChart />
-          </div>
+          </div> */}
       </section>
 
     </div>

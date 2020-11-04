@@ -18,19 +18,26 @@ export function PollVoting() {
     }
 
     const renderPollOptions = poll.answers.map(option => (
-        <React.Fragment key={option.id}>
-            <input type="radio" id={`radioId${option.id}`} name={option.answer} value={option.id} checked={selectedOption === option.id} onChange={onRadioChange} />
+        <div key={option.id} className="radio-margin">
+            <input type="radio" className="radio-input" id={`radioId${option.id}`} name={option.answer} value={option.id} checked={selectedOption === option.id} onChange={onRadioChange} />
             <label htmlFor={option.answer}>{option.answer}</label><br />
-        </React.Fragment>
+        </div>
     ))
 
     return (
-        <div className="container">
-            <span className="Poll-Title">{poll.pollName}</span>
-            <form onSubmit={onFormSubmit}>
-                {renderPollOptions}
+        <>
+            <div className="padded-input">
+
+                <div className="poll-title">{poll.pollName}</div>
+            </div>
+
+            <form onSubmit={onFormSubmit} className="poll-form">
+                <di>
+                    {renderPollOptions}
+                </di>
+
                 <button type="submit">Vote</button>
             </form>
-        </div>
+        </>
     )
 }
