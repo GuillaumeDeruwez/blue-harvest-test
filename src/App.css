@@ -23,6 +23,12 @@
   display: flex;
 }
 
+@media (max-width: 400px) {
+  .section {
+    display: block;
+  }
+}
+
 .col{
   flex: 1;
   display: flex;
@@ -33,10 +39,9 @@
 
 .col3{
   flex: 1;
-  background-color: cornflowerblue;
+  display: flex;
+  padding: 2vh 2vw;
 }
-
-/* first column */
 
 .bottom-col1{
   flex: 1;
@@ -102,4 +107,33 @@ input[type='radio'], label{
 .bottom-col1 > button, .poll-form > button{
   width: 20%
 }
+
+.chart-flex{
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-header{
+  flex-basis: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.chart-header-span{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.item{
+  flex: 1 0 70%;
+}
+
+.chart-footer{
+  flex-basis: 10%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1.5vh;
+}
+
 

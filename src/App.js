@@ -19,9 +19,9 @@ function App() {
           <div className="col">
             <PollVoting />
           </div>
-          {/* <div className="col3">
+          <div className="col3">
             <PollChart />
-          </div> */}
+          </div>
       </section>
 
     </div>
