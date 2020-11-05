@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export const initialState = {
     pollName: "",
     answers: [
         { id: "0", answer: "first answer", vote: 0 },
@@ -41,6 +41,7 @@ export const pollSlice = createSlice({
 
 export const {nameEdited, answerAdded, answerEdited, answerRemoved, answerVoted, reset} = pollSlice.actions;
 
-export const selectPoll = state => state.poll;
+export const selectPollName = state => state.poll.pollName;
+export const selectPollAnswers = state => state.poll.answers;
 
 export default pollSlice.reducer;

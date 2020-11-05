@@ -1,17 +1,18 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { selectPoll } from './pollSlice';
+import { selectPollName, selectPollAnswers } from './pollSlice';
 import { Bar } from 'react-chartjs-2';
 import "chartjs-plugin-datalabels";
 
 export function PollChart() {
-    const poll = useSelector(selectPoll);
-    const chartHeight = Math.max(...poll.answers.map(el => el.vote)) + 1;
+    const pollName = useSelector(selectPollName);
+    const pollAnswers = useSelector(selectPollAnswers);
+    const chartHeight = Math.max(...pollAnswers.map(el => el.vote)) + 1;
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    const total = poll.answers.map(el => el.vote).reduce(reducer);
+    const total = pollAnswers.map(el => el.vote).reduce(reducer);
 
     const data = {
-        labels: poll.answers.map(el => el.answer),
+        labels: pollAnswers.map(el => el.answer),
         datasets: [
             {
                 backgroundColor: 'rgba(255,99,132,0.2)',
@@ -19,14 +20,14 @@ export function PollChart() {
                 borderWidth: 1,
                 hoverBackgroundColor: 'rgba(255,99,132,0.4)',
                 hoverBorderColor: 'rgba(255,99,132,1)',
-                data: poll.answers.map(el => el.vote)
+                data: pollAnswers.map(el => el.vote)
             }
         ]
     };
 
     return (
         <div className="chart-flex">
-            <div className="chart-header"><span className="chart-header-span">{poll.pollName}</span></div>
+            <div className="chart-header"><span className="chart-header-span">{pollName}</span></div>
 
             <div className="item">
                 <Bar
