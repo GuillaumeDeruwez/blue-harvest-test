@@ -3,7 +3,11 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from './app/store';
 import App from './App';
-import 'jest-canvas-mock';
+
+// mock context for chart
+jest.mock('react-chartjs-2', () => ({
+  Bar: () => null, // add any additional chart types here
+}));
 
 test('renders learn react link', () => {
   const { getByText } = render(

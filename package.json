@@ -36,8 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "jest-canvas-mock": "^2.3.0",
-    "redux-mock-store": "^1.5.4"
-  }
+  "devDependencies": {}
 }

@@ -13,7 +13,7 @@ export function Simple() {
     return (
         <>
             <div>{pollName}</div>
-            <di>{state}</di>
+            <div>{state}</div>
             <button onClick={click}>click me</button>
         </>
 
