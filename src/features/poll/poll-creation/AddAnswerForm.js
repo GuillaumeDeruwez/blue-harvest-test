@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { nanoid } from '@reduxjs/toolkit'
-import { answerAdded, selectPollAnswers } from './pollSlice'
+import { answerAdded, selectPollAnswers } from '../pollSlice'
 
 export const AddAnswerForm = () => {
     const [answer, setAnswer] = useState('')

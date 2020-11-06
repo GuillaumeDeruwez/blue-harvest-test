@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
-import { answerVoted, selectPollName, selectPollAnswers } from './pollSlice';
+import { answerVoted, selectPollName, selectPollAnswers } from '../pollSlice';
 import { useDispatch } from 'react-redux'
 
 export function PollVoting() {
@@ -28,8 +28,7 @@ export function PollVoting() {
     return (
         <>
             <div className="padded-input">
-
-                <div className="poll-title">{pollName}</div>
+                <h2>{pollName}</h2>
             </div>
 
             <form onSubmit={onFormSubmit} className="poll-form">

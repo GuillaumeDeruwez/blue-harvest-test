@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { selectPollName, selectPollAnswers } from './pollSlice';
+import { selectPollName, selectPollAnswers } from '../pollSlice';
 import { Bar } from 'react-chartjs-2';
 import "chartjs-plugin-datalabels";
 
@@ -27,7 +27,7 @@ export function PollChart() {
 
     return (
         <div className="chart-flex">
-            <div className="chart-header"><span className="chart-header-span">{pollName}</span></div>
+            <div className="chart-header"><h2>{pollName}</h2></div>
 
             <div className="item">
                 <Bar
