@@ -21,12 +21,6 @@
   display: flex;
 }
 
-@media (max-width: 400px) {
-  .section {
-    display: block;
-  }
-}
-
 .col{
   flex: 1;
   display: flex;
@@ -72,7 +66,7 @@ input[type='radio'], label{
   margin-bottom: 2vh;
 }
 
-[type=text], [type=text] + button, .bottom-col1 > button, .poll-form > button{
+textarea, textarea + button, .bottom-col1 > button, .poll-form > button{
   padding: 0.2em;
   margin: 0.5em 0.2em;
   -moz-box-sizing: content-box; 
@@ -81,12 +75,13 @@ input[type='radio'], label{
   height: 3vh;
 }
 
-[type=text] {
+textarea {
   width: 80%;
 }
 
-[type=text] + button{
+textarea + button{
   width: 10%;
+  vertical-align: top;
 }
 
 .bottom-col1 > button, .poll-form > button{
@@ -94,27 +89,42 @@ input[type='radio'], label{
 }
 
 .chart-flex{
-  flex: 7;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .chart-header{
-  flex-basis: 10%;
   display: flex;
   align-items: center;
+  margin-top: 2vh;
 }
 
 .item{
   margin-top: 5%;
-  flex: 1 0 70%;
+  flex-grow: 1;
 }
 
 .chart-footer{
   flex-basis: 10%;
+  flex-grow: 0;
   display: flex;
   align-items: flex-end;
   padding-bottom: 1.5vh;
 }
 
+h2{
+  min-height: 4vh;
+  overflow-wrap: break-word;
+  max-width: 25vw;
+}
 
+@media (max-width: 400px) {
+  .section {
+    display: block;
+  }
+  h2{
+    max-width: 90vw;
+  }
+}

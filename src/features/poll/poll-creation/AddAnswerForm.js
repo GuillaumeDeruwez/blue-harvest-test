@@ -28,10 +28,10 @@ export const AddAnswerForm = () => {
     return (
         <section>
             <form>
-                <input
-                    type="text"
+                <textarea
                     id="answerTitle"
                     name="answerTitle"
+                    rows="14" cols="10" wrap="soft"
                     value={answer}
                     placeholder="Type an answer"
                     onChange={onAnswerChanged}

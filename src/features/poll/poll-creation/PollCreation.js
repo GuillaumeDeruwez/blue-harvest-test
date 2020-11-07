@@ -21,7 +21,7 @@ export function PollCreation() {
     return (
         <>
             <div className="padded-input">
-                <input type="text" maxLength="80" placeholder="name your poll" value={pollName} onChange={onNameChanged} />
+                <textarea rows="14" cols="10" wrap="soft" maxLength="80" placeholder="name your poll" value={pollName} onChange={onNameChanged} aria-label="poll-name" />
             </div>
 
             <PollAnswer />
@@ -30,7 +30,7 @@ export function PollCreation() {
 
             <div className="bottom-col1">
                 <p>{pollAnswers.length}/10 possible answers</p>
-                <button onClick={onResetClicked}>Reset</button>
+                <button role="reset" onClick={onResetClicked}>Reset</button>
             </div>
         </>
     )

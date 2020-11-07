@@ -19,7 +19,7 @@ export function PollAnswer() {
 
     const renderPollAnswer = pollAnswers.map(answer => (
         <div key={answer.id}>
-            <input type="text" value={answer.answer} maxLength="80" onChange={onValueChanged} id={answer.id} />
+            <textarea rows="14" cols="10" wrap="soft" value={answer.answer} maxLength="80" onChange={onValueChanged} id={answer.id} />
             <button onClick={() => onRemoveQuestionClicked(answer.id)} disabled={pollAnswers.length < 3 ? true : false}>X</button>
         </div>
     ))

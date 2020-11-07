@@ -32,5 +32,5 @@ describe('testing component with selector simply', () => {
         userEvent.click(screen.getByText(/click me/i));
         expect(getByText(/Hello/i)).toBeInTheDocument();
 
-    })
+    });
 })
