@@ -31,7 +31,7 @@ describe('testing poll creation section', () => {
     //test that reset button is working
 
     it('should have a working input for poll name', () => {
-        const { getByRole } = render(
+        const { getByTitle } = render(
             <Provider store={store}>
                 <PollCreation />
             </Provider>
@@ -45,7 +45,7 @@ describe('testing poll creation section', () => {
 
         expect(store.getState().poll.answers.length).toEqual(3);
 
-        userEvent.click(getByRole("reset"));
+        userEvent.click(getByTitle("reset"));
         
         expect(store.getState().poll.answers.length).toEqual(2);
     });

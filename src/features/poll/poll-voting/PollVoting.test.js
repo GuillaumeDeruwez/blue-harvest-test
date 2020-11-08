@@ -25,9 +25,9 @@ describe('testing poll voting', () => {
         );
 
         const input = getAllByRole("radio")[0];
-        expect(input).not.checked;
+        expect(input.checked).toEqual(false);
         userEvent.click(input);
-        expect(input).checked;
+        expect(input.checked).toEqual(true);
     });
 
     it("should havea working voting button", () => {

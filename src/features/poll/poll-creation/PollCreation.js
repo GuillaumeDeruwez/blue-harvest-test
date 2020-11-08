@@ -30,7 +30,7 @@ export function PollCreation() {
 
             <div className="bottom-col1">
                 <p>{pollAnswers.length}/10 possible answers</p>
-                <button role="reset" onClick={onResetClicked}>Reset</button>
+                <button title="reset" onClick={onResetClicked}>Reset</button>
             </div>
         </>
     )

@@ -29,7 +29,7 @@ export function PollChart() {
         <div className="chart-flex">
             <div className="chart-header"><h2>{pollName}</h2></div>
 
-            <div className="item">
+            <div className="item" data-testid="bar-chart">
                 <Bar
                     data={data}
                     options={{
@@ -54,7 +54,7 @@ export function PollChart() {
                 />
             </div>
 
-            <div className="chart-footer"><span>Total votes: {total} </span></div>
+            <div className="chart-footer"><span data-testid="total">Total votes: {total} </span></div>
         </div>
     )
 }
