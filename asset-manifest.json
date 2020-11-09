@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/blue-harvest-test/static/css/main.39f8bac1.chunk.css",
+    "main.js": "/blue-harvest-test/static/js/main.9ff3f3b6.chunk.js",
+    "main.js.map": "/blue-harvest-test/static/js/main.9ff3f3b6.chunk.js.map",
+    "runtime-main.js": "/blue-harvest-test/static/js/runtime-main.ad258766.js",
+    "runtime-main.js.map": "/blue-harvest-test/static/js/runtime-main.ad258766.js.map",
+    "static/js/2.d73e3242.chunk.js": "/blue-harvest-test/static/js/2.d73e3242.chunk.js",
+    "static/js/2.d73e3242.chunk.js.map": "/blue-harvest-test/static/js/2.d73e3242.chunk.js.map",
+    "index.html": "/blue-harvest-test/index.html",
+    "static/css/main.39f8bac1.chunk.css.map": "/blue-harvest-test/static/css/main.39f8bac1.chunk.css.map",
+    "static/js/2.d73e3242.chunk.js.LICENSE.txt": "/blue-harvest-test/static/js/2.d73e3242.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad258766.js",
+    "static/js/2.d73e3242.chunk.js",
+    "static/css/main.39f8bac1.chunk.css",
+    "static/js/main.9ff3f3b6.chunk.js"
+  ]
+}
