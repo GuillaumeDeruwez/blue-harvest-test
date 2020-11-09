@@ -1,4 +1,21 @@
+# Sir vote a lot: a blue harvest front end assignement
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
+## Usage
+The single page application is divided in three main section from left to right: Poll creation, Poll voting and Poll chart
+
+### Poll creation
+This section allows you to fill in the details of your poll, changing the name, adding, removing and editing answers.
+Each input allows a maximum of length of 80 characters and must contain a minimum of 2 answers.
+
+This section alos contain a reset button that will reset the poll to the default setting.
+
+### Poll voting
+This section allows you to vote for the answer you like, you may only select one answer each time but can vote multiple time.
+
+## Poll Chart
+This section will display the result of the vote in a bar chart and will display the total number of votes.
 
 ## Available Scripts
 
